@@ -20,7 +20,7 @@ class MobileBankApiTestV2 {
       .then()
           .statusCode(200)
           .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
-          // .header("Content-Type", "application/json; charset=UTF-8")
+          .header("Content-Type", "application/json; charset=UTF-8")
           // специализированные проверки - лучше
           .contentType(ContentType.JSON)
       ;
